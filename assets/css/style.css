@@ -83,7 +83,7 @@ a:hover #icon-white2 {
 }
 
 a:hover #icon-white3 {
-    content: url('/assets/svg-white/icons8-linkedin.svg'); /* Altera a imagem ao passar o mouse */
+    content: url('assets/svg-white/icons8-linkedin.svg'); /* Altera a imagem ao passar o mouse */
     width: 20px;
     margin-right: 6px;
     vertical-align: middle;
