@@ -1,0 +1,5 @@
+@media screen and (max-width: 1024px) {
+    a {
+        max-width: 50%; /*tamanho maximo das bordas dos botoes*/
+    }
+  }
