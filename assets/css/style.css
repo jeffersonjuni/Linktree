@@ -90,7 +90,7 @@ a:hover #icon-white3 {
 }
 
 a:hover #icon-white4 {
-    content: url('/assets/svg-white/icons8-facebook-novo.svg'); /* Altera a imagem ao passar o mouse */
+    content: url('assets/svg-white/icons8-facebook-novo.svg'); /* Altera a imagem ao passar o mouse */
     width: 20px;
     margin-right: 6px;
     vertical-align: middle;
