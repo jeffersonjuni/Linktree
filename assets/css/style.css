@@ -76,7 +76,7 @@ a:hover #icon-white1 {
 }
 
 a:hover #icon-white2 {
-    content: url('/assets/svg-white/icons8-github.svg'); /* Altera a imagem ao passar o mouse */
+    content: url('assets/svg-white/icons8-github.svg'); /* Altera a imagem ao passar o mouse */
     width: 20px;
     margin-right: 6px;
     vertical-align: middle;
