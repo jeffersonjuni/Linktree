@@ -43,6 +43,19 @@
     </section>
 
     <script src="main.js"></script>
+
+    <script>
+        // Ao clicar, remove o foco do link
+        const links = document.querySelectorAll('.social-link');
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                setTimeout(() => {
+                    link.blur(); // Remove o foco após o clique
+                }, 100); // Delay para garantir que o link tenha sido ativado
+            });
+        });
+    </script>
 </body>
 
 </html>
