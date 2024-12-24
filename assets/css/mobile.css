@@ -3,6 +3,10 @@
         max-width: 50%; /*tamanho maximo das bordas dos botoes*/
     }
 
+    a:focus {
+        outline: none; /* Remove borda ao focar no link */
+    }
+
     .icon{
         display: none;
     }
