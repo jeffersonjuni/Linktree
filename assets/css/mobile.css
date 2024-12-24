@@ -4,7 +4,8 @@
     }
 
     a:focus {
-        outline: none; /* Remove borda ao focar no link */
+        outline: none;
+        box-shadow: none;
     }
 
     .icon{

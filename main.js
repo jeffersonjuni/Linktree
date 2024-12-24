@@ -2,26 +2,33 @@ function changeIcon(element, newSrc) {
     element.querySelector('img').src = newSrc;
 }
 
-// Remover o foco ao interagir com links e botões
-document.querySelectorAll("a").forEach(element => {
+// Remover o foco de links e botões ao clicar
+document.querySelectorAll("a, button").forEach(element => {
     element.addEventListener("click", () => {
-        // Aguarda o clique e remove o foco
         setTimeout(() => {
-            element.blur();
-        }, 100); // Pequeno atraso para evitar interferir na navegação
+            element.blur(); // Remove o foco do elemento clicado
+        }, 100); // Adiciona um pequeno atraso para evitar interferência
     });
 });
 
-// Remover o foco ao retornar à página
+// Remover o foco ao retornar à página (iOS e outros navegadores)
 document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") {
-        const activeElement = document.activeElement;
-
-        // Verifica se o elemento ativo é um link ou botão e remove o foco
-        if (activeElement.tagName === "A" || activeElement.tagName === "BUTTON") {
-            activeElement.blur();
+        // Remove o foco do elemento ativo
+        if (document.activeElement) {
+            document.activeElement.blur();
         }
     }
 });
+
+// Força o reset de foco adicionalmente no iOS
+window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+        setTimeout(() => {
+            document.activeElement?.blur();
+        }, 100); // Adiciona um pequeno atraso para garantir compatibilidade no iOS
+    }
+});
+
 
 
