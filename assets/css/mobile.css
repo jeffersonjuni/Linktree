@@ -2,4 +2,9 @@
     a {
         max-width: 50%; /*tamanho maximo das bordas dos botoes*/
     }
-  }
+
+    .icon{
+        display: none;
+    }
+}
+  
