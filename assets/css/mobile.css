@@ -3,7 +3,7 @@
         max-width: 50%; /*tamanho maximo das bordas dos botoes*/
     }
 
-    a:focus {
+    a:focus, a:hover {
         outline: none;
         box-shadow: none;
     }
