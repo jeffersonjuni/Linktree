@@ -2,7 +2,17 @@ function changeIcon(element, newSrc) {
     element.querySelector('img').src = newSrc;
 }
 
-// Remover foco ao voltar de um app
+// Remover o foco ao interagir com links e botões
+document.querySelectorAll("a").forEach(element => {
+    element.addEventListener("click", () => {
+        // Aguarda o clique e remove o foco
+        setTimeout(() => {
+            element.blur();
+        }, 100); // Pequeno atraso para evitar interferir na navegação
+    });
+});
+
+// Remover o foco ao retornar à página
 document.addEventListener("visibilitychange", () => {
     if (document.visibilityState === "visible") {
         const activeElement = document.activeElement;
@@ -13,4 +23,5 @@ document.addEventListener("visibilitychange", () => {
         }
     }
 });
+
 
